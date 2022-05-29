@@ -13,7 +13,8 @@ fi
 if [[ -d $path ]]; then
     cd "$path" || exit
     rm -f archlabs-testing.* archlabs-testing.db.tar.gz
-    repo-add archlabs-testing.db.tar.gz ./*.pkg.tar.xz ./*.pkg.tar.zst || exit
+    repo-add archlabs-testing.db.tar.gz ./*.pkg.tar.zst
+    repo-add archlabs-testing.db.tar.gz ./*.pkg.tar.xz
 	rm -f archlabs-testing.db archlabs-testing.files
     cp -f archlabs-testing.db.tar.gz archlabs-testing.db || exit
 	cp -f archlabs-testing.files.tar.gz archlabs-testing.files || exit
